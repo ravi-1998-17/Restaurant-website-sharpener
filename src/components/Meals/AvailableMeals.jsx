@@ -34,10 +34,24 @@ const DUMMY_DISHES = [
     description: "Spicy chickpeas served with fried bread",
     price: 160,
   },
+  {
+    id: "06",
+    name: "Paav Bhaji",
+    description:
+      "Pav Bhaji is a popular Indian street food that originated in Mumbai",
+    price: 160,
+  },
 ];
 
 const AvailableMeals = () => {
-  const mealList = DUMMY_DISHES.map((meal) => <MealItem key={meal.id} name={meal.name} description={meal.description} price={meal.price}/>);
+  const mealList = DUMMY_DISHES.map((meal) => (
+    <MealItem
+      key={meal.id}
+      name={meal.name}
+      description={meal.description}
+      price={meal.price}
+    />
+  ));
 
   return (
     <>
